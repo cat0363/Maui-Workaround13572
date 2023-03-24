@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui_Workaround13572.MainPage">
+    <Grid RowDefinitions="44,44,44,44,44,*" ColumnDefinitions="Auto,*">
+        <Label Grid.Row="0" Grid.Column="0" Text="Latitude:" TextColor="Black" VerticalOptions="Center" />
+        <Entry Grid.Row="0" Grid.Column="1" x:Name="txtLatitude" Keyboard="Numeric" />
+        <Label Grid.Row="1" Grid.Column="0" Text="Longitude:" TextColor="Black" VerticalOptions="Center" />
+        <Entry Grid.Row="1" Grid.Column="1" x:Name="txtLongitude" Keyboard="Numeric" />
+
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="5">
+                <Button Grid.Column="0" x:Name="btnLocationToAddress" Text="Get Address" BackgroundColor="Blue" TextColor="White" Clicked="btnLocationToAddress_Clicked"/>
+                <Button Grid.Column="1" x:Name="btnAddressToLocation" Text="Get Location" BackgroundColor="Blue" TextColor="White" Clicked="btnAddressToLocation_Clicked" />
+            </Grid>
+        </Grid>
+
+        <Label Grid.Row="3" Grid.Column="0" Text="Address:" TextColor="Black" VerticalOptions="Center" />
+        <Entry Grid.Row="3" Grid.Column="1" x:Name="txtAddress" />
+    </Grid>
+
+</ContentPage>
